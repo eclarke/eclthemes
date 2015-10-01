@@ -3,9 +3,9 @@
 \name{theme_ecl}
 \alias{theme_ecl}
 \title{A clean theme based on ggthemes::theme_fivethirtyeight, but with a white
-background and axis titles.}
+background, axis titles, and a vertical legend on the right.}
 \usage{
-theme_ecl(base_size = 20, base_family = "sans")
+theme_ecl(base_size = 16, base_family = "sans")
 }
 \arguments{
 \item{base_size}{base font size}
@@ -14,10 +14,11 @@ theme_ecl(base_size = 20, base_family = "sans")
 }
 \description{
 A clean theme based on ggthemes::theme_fivethirtyeight, but with a white
-background and axis titles.
+background, axis titles, and a vertical legend on the right.
 }
 \examples{
-ggplot(mtcars, aes(mpg, color=factor(cyl), fill=factor(cyl), group=factor(cyl))) +
- geom_density(alpha=0.5) + theme_ecl()
+(ggplot(mtcars, aes(mpg, color=factor(cyl), fill=factor(cyl), group=factor(cyl))))
+ + geom_density(alpha=0.5)
+ + theme_ecl()
 }
 

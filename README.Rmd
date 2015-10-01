@@ -1,0 +1,27 @@
+---
+title: "theme_ecl"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+A sane ggplot2 theme with large text and clean lines, suitable for presentations.
+
+```{r example-figure, warning=FALSE, message=FALSE, fig.width=10, fig.height=4}
+library(ggplot2)
+library(eclthemes)
+library(nycflights13)
+
+flights <- within(flights, {
+  dep_time_min <- hour*60 + minute
+})
+
+ggplot(flights, aes(dep_time_min, color=origin, group=origin, fill=origin)) +
+  geom_density(alpha=0.5) +
+  theme_ecl() +
+  ylab("Density") +
+  xlab("Departure (minutes from midnight)") +
+  ggtitle("Outgoing flights by time of day")
+
+```
+
