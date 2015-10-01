@@ -7,7 +7,7 @@
 #'  (ggplot(mtcars, aes(mpg, color=factor(cyl), fill=factor(cyl), group=factor(cyl))))
 #'  + geom_density(alpha=0.5)
 #'  + theme_clarity()
-theme_clarity <- function(base_size = 16, base_family = "sans") {
+theme_clarity <- function(base_size = 20, base_family = "sans") {
   ggplot2::theme_bw() +
     ggthemes::theme_fivethirtyeight(base_size, base_family) +
     ggplot2::theme(

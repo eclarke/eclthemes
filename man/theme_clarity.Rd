@@ -5,7 +5,7 @@
 \title{A clean theme based on ggthemes::theme_fivethirtyeight, but with a white
 background, axis titles, and a vertical legend on the right.}
 \usage{
-theme_clarity(base_size = 16, base_family = "sans")
+theme_clarity(base_size = 20, base_family = "sans")
 }
 \arguments{
 \item{base_size}{base font size}
