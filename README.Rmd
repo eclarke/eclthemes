@@ -7,6 +7,8 @@ output:
 
 A sane ggplot2 theme with large text and clean lines, suitable for presentations.
 
+Install using `devtools::install_github("eclarke/eclthemes")`.
+
 ```{r example-figure, warning=FALSE, message=FALSE, fig.width=10, fig.height=4}
 library(ggplot2)
 library(eclthemes)

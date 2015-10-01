@@ -2,6 +2,8 @@
 
 A sane ggplot2 theme with large text and clean lines, suitable for presentations.
 
+Install using `devtools::install_github("eclarke/eclthemes")`.
+
 
 ```r
 library(ggplot2)
