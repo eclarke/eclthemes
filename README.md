@@ -1,6 +1,6 @@
 # theme_ecl
 
-A sane ggplot2 theme with large text and clean lines, suitable for presentations.
+A sane ggplot2 theme with large text and clean lines, suitable for presentations. Based off the fivethirtyeight theme from [ggthemes](https://github.com/jrnold/ggthemes).
 
 Install using `devtools::install_github("eclarke/eclthemes")`.
 
