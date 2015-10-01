@@ -1,6 +1,6 @@
-# theme_ecl
+# Clarity (ggplot2 theme)
 
-A sane ggplot2 theme with large text and clean lines, suitable for presentations.
+A sane ggplot2 theme with large text and clean lines, suitable for presentations. Based off the fivethirtyeight theme from [ggthemes](https://github.com/jrnold/ggthemes).
 
 Install using `devtools::install_github("eclarke/eclthemes")`.
 
@@ -16,7 +16,7 @@ flights <- within(flights, {
 
 ggplot(flights, aes(dep_time_min, color=origin, group=origin, fill=origin)) +
   geom_density(alpha=0.5) +
-  theme_ecl() +
+  theme_clarity() +
   ylab("Density") +
   xlab("Departure (minutes from midnight)") +
   ggtitle("Outgoing flights by time of day")
