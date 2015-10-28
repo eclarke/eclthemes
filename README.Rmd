@@ -27,3 +27,24 @@ ggplot(flights, aes(dep_time_min, color=origin, group=origin, fill=origin)) +
 
 ```
 
+To add axis lines:
+
+```{r}
+theme_clarity2 <- theme_clarity() +
+  theme(
+    axis.line = element_line(size=0.8),
+    strip.background = element_blank(),
+    strip.text = element_text(hjust=0.5)
+  )
+
+ggplot(mtcars, aes(mpg, color=factor(cyl), fill=factor(cyl), group=factor(cyl))) + 
+  geom_density(alpha=0.5) + 
+  theme_clarity() +
+  theme(
+    axis.line = element_line(size=0.8),
+    strip.background = element_blank(),
+    strip.text = element_text(hjust=0.5)
+  )
+
+```
+
