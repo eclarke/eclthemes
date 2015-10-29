@@ -27,24 +27,26 @@ ggplot(flights, aes(dep_time_min, color=origin, group=origin, fill=origin)) +
 
 ```
 
-To add axis lines:
+To make these plots a little bit more publication quality:
 
-```{r}
-theme_clarity2 <- theme_clarity() +
+```{r, fig.width=9, fig.height=4}
+library(grid)
+ggplot(mtcars, aes(mpg, group=factor(cyl))) + 
+  geom_density(alpha=0.5, aes(color=factor(cyl)), show_guide=FALSE) +
+  geom_density(alpha=0.5, aes(fill=factor(cyl)), color=NA) + 
+  theme_clarity(base_size = 14) +
   theme(
     axis.line = element_line(size=0.8),
     strip.background = element_blank(),
-    strip.text = element_text(hjust=0.5)
-  )
-
-ggplot(mtcars, aes(mpg, color=factor(cyl), fill=factor(cyl), group=factor(cyl))) + 
-  geom_density(alpha=0.5) + 
-  theme_clarity() +
-  theme(
-    axis.line = element_line(size=0.8),
-    strip.background = element_blank(),
-    strip.text = element_text(hjust=0.5)
-  )
+    strip.text = element_text(hjust=0.5),
+    axis.ticks = element_line(size=1)
+  ) +
+  scale_y_continuous(expand = c(0,0), limit=c(0, 0.25)) +
+  scale_x_continuous(expand = c(0,0), limit=c(10, 35)) +
+  scale_fill_discrete("Cylinders") +
+  scale_color_discrete("Cylinders") +
+  labs(x="Miles per gallon", y="Density") +
+  guides(fill=guide_legend(override.aes = list(alpha=1, color="black")))
 
 ```
 

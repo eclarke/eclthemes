@@ -21,3 +21,4 @@ theme_clarity <- function(base_size = 20, base_family = "sans") {
       legend.direction = "vertical"
     )
 }
+
