@@ -50,3 +50,11 @@ ggplot(mtcars, aes(mpg, group=factor(cyl))) +
 
 ```
 
+```{r}
+mtcars$cyl <- factor(mtcars$cyl)
+
+ggplot(mtcars, aes(mpg, group=cyl)) +
+  geom_density(alpha=0.5, aes(color=cyl, fill=cyl)) +
+  theme_clarity(base_size=14)
+```
+

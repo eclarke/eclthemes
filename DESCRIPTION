@@ -1,12 +1,12 @@
 Package: eclthemes
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Clean, minimal ggplot2 themes
 Version: 0.1
 Date: 2015-10-01
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Erik Clarke
+Maintainer: Erik Clarke <erikclarke@gmail.com>
+Description: Provides themes for publication figures or presentations in ggplot2.
+License: GPL (>=2)
 LazyData: TRUE
 Imports:
   ggplot2,
