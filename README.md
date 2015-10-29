@@ -37,7 +37,7 @@ ggplot(mtcars, aes(mpg, group=factor(cyl))) +
     axis.line = element_line(size=0.8),
     strip.background = element_blank(),
     strip.text = element_text(hjust=0.5),
-    axis.ticks = element_line(size=1)
+    axis.ticks = element_line(size=0.8)
   ) +
   scale_y_continuous(expand = c(0,0), limit=c(0, 0.25)) +
   scale_x_continuous(expand = c(0,0), limit=c(10, 35)) +
