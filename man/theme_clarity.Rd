@@ -17,8 +17,13 @@ A clean theme based on ggthemes::theme_fivethirtyeight, but with a white
 background, axis titles, and a vertical legend on the right.
 }
 \examples{
-(ggplot(mtcars, aes(mpg, color=factor(cyl), fill=factor(cyl), group=factor(cyl))))
- + geom_density(alpha=0.5)
- + theme_clarity()
+library(ggplot2)
+library(eclthemes)
+
+mtcars$cyl <- factor(mtcars$cyl)
+
+ggplot(mtcars, aes(mpg, group=cyl)) +
+  geom_density(alpha=0.5, aes(color=cyl, fill=cyl)) +
+  theme_clarity(base_size=14)
 }
 
