@@ -5,6 +5,8 @@ output:
     keep_md: yes
 ---
 
+[![Build Status](https://travis-ci.org/eclarke/eclthemes.svg?branch=master)](https://travis-ci.org/eclarke/eclthemes)
+
 A sane ggplot2 theme with large text and clean lines, suitable for presentations. Based off the fivethirtyeight theme from [ggthemes](https://github.com/jrnold/ggthemes).
 
 Install using `devtools::install_github("eclarke/eclthemes")`.
